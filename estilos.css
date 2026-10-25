@@ -1,0 +1,96 @@
+/* Señal — tokens de diseño · Cumbra v1.0 (subconjunto para las páginas legales) */
+:root{
+  --cumbra-fondo:#071726;
+  --cumbra-superficie:#0F2438;
+  --cumbra-linea:#1E3A55;
+  --cumbra-borde:#376A90;
+  --cumbra-texto:#E4EDF4;
+  --cumbra-texto-2:#9FB4C6;
+  --cumbra-texto-3:#7D94A8;
+  --cumbra-dorado:#C9A96E;
+  --cumbra-anestesia:#3FC79C;
+  --cumbra-trauma:#E08A4E;
+  --cumbra-lectura:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,sans-serif;
+  --cumbra-instrumento:"IBM Plex Mono",ui-monospace,monospace;
+  --cumbra-radio-tarjeta:12px;
+  --cumbra-tracking-etiqueta:0.18em;
+  --cumbra-acento:var(--cumbra-dorado);
+}
+[data-vertical="anestesia"]{ --cumbra-acento:var(--cumbra-anestesia); }
+[data-vertical="trauma"]{ --cumbra-acento:var(--cumbra-trauma); }
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--cumbra-fondo);
+  color:var(--cumbra-texto);
+  font-family:var(--cumbra-lectura);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-text-size-adjust:100%;
+}
+.envoltura{max-width:44rem;margin:0 auto;padding:3rem 1.5rem 5rem}
+.marca{
+  font-family:var(--cumbra-instrumento);
+  font-size:.72rem;
+  letter-spacing:var(--cumbra-tracking-etiqueta);
+  text-transform:uppercase;
+  color:var(--cumbra-acento);
+  margin:0 0 .5rem;
+}
+h1{font-size:1.9rem;line-height:1.2;margin:0 0 .4rem;font-weight:600}
+.vigencia{
+  font-family:var(--cumbra-instrumento);
+  font-size:.78rem;
+  color:var(--cumbra-texto-3);
+  margin:0 0 2.5rem;
+}
+h2{
+  font-size:1.15rem;
+  font-weight:600;
+  margin:2.75rem 0 .75rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--cumbra-linea);
+}
+h2:first-of-type{border-top:0;padding-top:0}
+p,li{color:var(--cumbra-texto-2)}
+p{margin:0 0 1rem}
+ul{margin:0 0 1rem;padding-left:1.2rem}
+li{margin-bottom:.5rem}
+strong{color:var(--cumbra-texto);font-weight:600}
+a{color:var(--cumbra-acento);text-decoration:underline;text-underline-offset:2px}
+table{width:100%;border-collapse:collapse;margin:0 0 1.25rem;font-size:.94rem}
+th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--cumbra-linea);vertical-align:top}
+th{
+  font-family:var(--cumbra-instrumento);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--cumbra-texto-3);
+  font-weight:500;
+}
+td{color:var(--cumbra-texto-2)}
+.tarjeta{
+  background:var(--cumbra-superficie);
+  border:1px solid var(--cumbra-linea);
+  border-radius:var(--cumbra-radio-tarjeta);
+  padding:1.1rem 1.25rem;
+  margin:0 0 1.25rem;
+}
+.tarjeta p:last-child{margin-bottom:0}
+.pie{
+  margin-top:3.5rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--cumbra-linea);
+  font-size:.88rem;
+  color:var(--cumbra-texto-3);
+}
+.indice{list-style:none;padding:0;margin:2rem 0 0}
+.indice li{margin-bottom:.9rem}
+.indice a{font-size:1.05rem;font-weight:600;text-decoration:none}
+.indice span{display:block;font-size:.9rem;color:var(--cumbra-texto-3)}
+@media (max-width:480px){
+  body{font-size:16px}
+  .envoltura{padding:2rem 1.1rem 4rem}
+  h1{font-size:1.55rem}
+}
