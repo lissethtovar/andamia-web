@@ -1,96 +1,470 @@
-/* Señal — tokens de diseño · Cumbra v1.0 (subconjunto para las páginas legales) */
-:root{
-  --cumbra-fondo:#071726;
-  --cumbra-superficie:#0F2438;
-  --cumbra-linea:#1E3A55;
-  --cumbra-borde:#376A90;
-  --cumbra-texto:#E4EDF4;
-  --cumbra-texto-2:#9FB4C6;
-  --cumbra-texto-3:#7D94A8;
-  --cumbra-dorado:#C9A96E;
-  --cumbra-anestesia:#3FC79C;
-  --cumbra-trauma:#E08A4E;
-  --cumbra-lectura:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,sans-serif;
-  --cumbra-instrumento:"IBM Plex Mono",ui-monospace,monospace;
-  --cumbra-radio-tarjeta:12px;
-  --cumbra-tracking-etiqueta:0.18em;
-  --cumbra-acento:var(--cumbra-dorado);
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
 }
-[data-vertical="anestesia"]{ --cumbra-acento:var(--cumbra-anestesia); }
-[data-vertical="trauma"]{ --cumbra-acento:var(--cumbra-trauma); }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--cumbra-fondo);
-  color:var(--cumbra-texto);
-  font-family:var(--cumbra-lectura);
-  font-size:17px;
-  line-height:1.65;
-  -webkit-text-size-adjust:100%;
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
 }
-.envoltura{max-width:44rem;margin:0 auto;padding:3rem 1.5rem 5rem}
-.marca{
-  font-family:var(--cumbra-instrumento);
-  font-size:.72rem;
-  letter-spacing:var(--cumbra-tracking-etiqueta);
-  text-transform:uppercase;
-  color:var(--cumbra-acento);
-  margin:0 0 .5rem;
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin-600-normal.woff2') format('woff2');
 }
-h1{font-size:1.9rem;line-height:1.2;margin:0 0 .4rem;font-weight:600}
-.vigencia{
-  font-family:var(--cumbra-instrumento);
-  font-size:.78rem;
-  color:var(--cumbra-texto-3);
-  margin:0 0 2.5rem;
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
 }
-h2{
-  font-size:1.15rem;
-  font-weight:600;
-  margin:2.75rem 0 .75rem;
-  padding-top:1.5rem;
-  border-top:1px solid var(--cumbra-linea);
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
 }
-h2:first-of-type{border-top:0;padding-top:0}
-p,li{color:var(--cumbra-texto-2)}
-p{margin:0 0 1rem}
-ul{margin:0 0 1rem;padding-left:1.2rem}
-li{margin-bottom:.5rem}
-strong{color:var(--cumbra-texto);font-weight:600}
-a{color:var(--cumbra-acento);text-decoration:underline;text-underline-offset:2px}
-table{width:100%;border-collapse:collapse;margin:0 0 1.25rem;font-size:.94rem}
-th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--cumbra-linea);vertical-align:top}
-th{
-  font-family:var(--cumbra-instrumento);
-  font-size:.7rem;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  color:var(--cumbra-texto-3);
-  font-weight:500;
+
+:root {
+  --cumbra-fondo: #071726;
+  --cumbra-superficie: #0F2438;
+  --cumbra-linea: #1E3A55;
+  --cumbra-borde: #376A90;
+  --cumbra-texto: #E4EDF4;
+  --cumbra-texto-2: #9FB4C6;
+  --cumbra-texto-3: #7D94A8;
+  --cumbra-dorado: #C9A96E;
+  --cumbra-anestesia: #3FC79C;
+  --cumbra-trauma: #E08A4E;
+  --cumbra-radio: 10px;
+  --cumbra-lectura: 'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica, sans-serif;
+  --cumbra-instrumento: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
-td{color:var(--cumbra-texto-2)}
-.tarjeta{
-  background:var(--cumbra-superficie);
-  border:1px solid var(--cumbra-linea);
-  border-radius:var(--cumbra-radio-tarjeta);
-  padding:1.1rem 1.25rem;
-  margin:0 0 1.25rem;
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-.tarjeta p:last-child{margin-bottom:0}
-.pie{
-  margin-top:3.5rem;
-  padding-top:1.5rem;
-  border-top:1px solid var(--cumbra-linea);
-  font-size:.88rem;
-  color:var(--cumbra-texto-3);
+
+html {
+  background: var(--cumbra-fondo);
+  color: var(--cumbra-texto);
+  -webkit-text-size-adjust: 100%;
 }
-.indice{list-style:none;padding:0;margin:2rem 0 0}
-.indice li{margin-bottom:.9rem}
-.indice a{font-size:1.05rem;font-weight:600;text-decoration:none}
-.indice span{display:block;font-size:.9rem;color:var(--cumbra-texto-3)}
-@media (max-width:480px){
-  body{font-size:16px}
-  .envoltura{padding:2rem 1.1rem 4rem}
-  h1{font-size:1.55rem}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cumbra-fondo);
+  color: var(--cumbra-texto);
+  font-family: var(--cumbra-lectura);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--cumbra-dorado);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+a:hover {
+  opacity: 0.88;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cumbra-dorado);
+  outline-offset: 2px;
+}
+
+.salto {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 12px 16px;
+  background: var(--cumbra-dorado);
+  color: var(--cumbra-fondo);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--cumbra-radio);
+}
+
+.salto:focus {
+  left: 16px;
+  top: 16px;
+}
+
+.envoltura {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 28px 16px 48px;
+}
+
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--cumbra-linea);
+}
+
+.marca-cabecera {
+  font-family: var(--cumbra-instrumento);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cumbra-dorado);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
+  color: var(--cumbra-texto-2);
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: var(--cumbra-radio);
+}
+
+.nav a:hover {
+  color: var(--cumbra-texto);
+  opacity: 1;
+}
+
+main {
+  margin-top: 28px;
+}
+
+section + section {
+  margin-top: 38px;
+}
+
+.mono {
+  font-family: var(--cumbra-instrumento);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cumbra-texto-3);
+}
+
+.mono-dorado { color: var(--cumbra-dorado); }
+.mono-anestesia { color: var(--cumbra-anestesia); }
+.mono-trauma { color: var(--cumbra-trauma); }
+
+h1 {
+  margin: 10px 0 12px;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--cumbra-texto);
+}
+
+h2 {
+  margin: 6px 0 14px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--cumbra-texto);
+}
+
+h3 {
+  margin: 6px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cumbra-texto);
+}
+
+p {
+  margin: 0;
+  color: var(--cumbra-texto-2);
+}
+
+.lema {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cumbra-texto-2);
+  max-width: 56ch;
+}
+
+/* Hero con diagrama de andamiaje */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.pildoras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pildora {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: var(--cumbra-superficie);
+  border: 1px solid var(--cumbra-linea);
+  border-radius: var(--cumbra-radio);
+  font-family: var(--cumbra-instrumento);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--cumbra-texto-2);
+}
+
+.andamio-marco {
+  background: var(--cumbra-superficie);
+  border: 1px solid var(--cumbra-borde);
+  border-radius: var(--cumbra-radio);
+  padding: 16px;
+}
+
+.andamio-pie {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--cumbra-linea);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--cumbra-instrumento);
+  font-size: 0.75rem;
+  color: var(--cumbra-texto-3);
+}
+
+/* Rejillas dinámicas */
+.pilares-grid,
+.apps-grid,
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.tarjeta {
+  background: var(--cumbra-superficie);
+  border: 1px solid var(--cumbra-linea);
+  border-radius: var(--cumbra-radio);
+  padding: 18px;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.pilar-tarjeta:hover {
+  border-color: var(--cumbra-dorado);
+}
+
+.icono-svg {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.app-tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  border-color: var(--cumbra-borde);
+}
+
+.app-anestesia:hover {
+  border-color: var(--cumbra-anestesia);
+}
+
+.app-trauma {
+  border-color: var(--cumbra-linea);
+}
+
+.app-trauma:hover {
+  border-color: var(--cumbra-trauma);
+}
+
+.app-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 16px;
+  border-radius: var(--cumbra-radio);
+  font-family: var(--cumbra-lectura);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 150ms ease, border-color 150ms ease;
+}
+
+.btn-anestesia {
+  background: var(--cumbra-anestesia);
+  color: var(--cumbra-fondo);
+  border: 1px solid var(--cumbra-anestesia);
+}
+
+.btn-secundario {
+  background: var(--cumbra-fondo);
+  color: var(--cumbra-texto);
+  border: 1px solid var(--cumbra-borde);
+}
+
+.lista-legal {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.lista-legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  color: var(--cumbra-texto);
+  font-size: 0.9375rem;
+}
+
+/* Datos societarios desplegables */
+details.societarios {
+  background: var(--cumbra-superficie);
+  border: 1px solid var(--cumbra-borde);
+  border-radius: var(--cumbra-radio);
+}
+
+details.societarios[open] {
+  border-color: var(--cumbra-dorado);
+}
+
+details.societarios summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--cumbra-texto);
+  cursor: pointer;
+}
+
+details.societarios summary::-webkit-details-marker {
+  display: none;
+}
+
+.simbolo {
+  font-family: var(--cumbra-instrumento);
+  color: var(--cumbra-dorado);
+  transition: transform 150ms ease;
+}
+
+details.societarios[open] .simbolo {
+  transform: rotate(45deg);
+}
+
+.datos {
+  margin: 0;
+  padding: 14px 18px 18px;
+  border-top: 1px solid var(--cumbra-linea);
+  display: grid;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.datos-fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.datos dt {
+  font-family: var(--cumbra-instrumento);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cumbra-texto-3);
+  min-width: 112px;
+}
+
+.datos dd {
+  margin: 0;
+  color: var(--cumbra-texto);
+}
+
+.pie {
+  margin-top: 38px;
+  padding-top: 20px;
+  border-top: 1px solid var(--cumbra-linea);
+  display: grid;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--cumbra-texto-3);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 2.35rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .pilares-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .apps-grid,
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

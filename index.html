@@ -1,89 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Andamia — Entrenamiento cognitivo para médicos especialistas</title>
-<meta name="description" content="Andamia SpA desarrolla Cumbra, una familia de aplicaciones de entrenamiento cognitivo para médicos especialistas y en formación. Casos clínicos con fuente verificable.">
-<link rel="canonical" href="https://andamia.io/">
-<meta property="og:title" content="Andamia">
-<meta property="og:description" content="Lo que sostiene lo que construyes. Desarrollamos Cumbra: entrenamiento cognitivo para médicos especialistas.">
-<meta property="og:url" content="https://andamia.io/">
-<meta property="og:type" content="website">
-<link rel="stylesheet" href="estilos.css">
-<style>
-  .lema{font-size:1.15rem;color:var(--cumbra-texto-2);margin:0 0 2.5rem}
-  .apps{list-style:none;padding:0;margin:0 0 1rem;display:grid;gap:1rem}
-  .apps li{border:1px solid var(--cumbra-linea);border-radius:var(--cumbra-radio-tarjeta);padding:1.1rem 1.25rem;margin:0}
-  .apps .etiqueta{font-family:var(--cumbra-instrumento);font-size:.72rem;letter-spacing:var(--cumbra-tracking-etiqueta);text-transform:uppercase;margin:0 0 .35rem}
-  .apps[data-vertical] .etiqueta{color:var(--cumbra-acento)}
-  .apps li[data-vertical="anestesia"] .etiqueta{color:var(--cumbra-anestesia)}
-  .apps li[data-vertical="trauma"] .etiqueta{color:var(--cumbra-trauma)}
-  .apps h3{margin:0 0 .3rem;font-size:1.05rem;font-weight:600;color:var(--cumbra-texto)}
-  .apps p{margin:0;font-size:.95rem}
-  .datos{font-family:var(--cumbra-instrumento);font-size:.85rem;color:var(--cumbra-texto-3);line-height:1.8}
-  .datos dt{color:var(--cumbra-texto-2);display:inline;margin-right:.5rem}
-  .datos dd{display:inline;margin:0}
-  .datos div{margin-bottom:.25rem}
-  a{color:var(--cumbra-acento)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andamia — Estructuras que sostienen el conocimiento</title>
+  <meta name="description" content="Estructuras que sostienen el conocimiento. Como un andamio, Andamia diseña entornos claros para entrenar el criterio profesional. Desarrollamos Cumbra para especialidades médicas.">
+  <link rel="canonical" href="https://andamia.io/">
+  <meta property="og:title" content="Andamia — Estructuras que sostienen el conocimiento">
+  <meta property="og:description" content="Estructuras que sostienen el conocimiento. Como un andamio, Andamia diseña entornos claros para entrenar el criterio profesional.">
+  <meta property="og:url" content="https://andamia.io/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#071726">
+  <link rel="stylesheet" href="/estilos.css">
 </head>
 <body>
-<main class="envoltura">
+  <a class="salto" href="#contenido">Saltar al contenido</a>
 
-  <p class="marca">Andamia</p>
-  <h1>Lo que sostiene lo que construyes</h1>
-  <p class="lema">Andamia desarrolla <strong>Cumbra</strong>, una familia de aplicaciones de entrenamiento
-  cognitivo para médicos especialistas y en formación.</p>
+  <div class="envoltura">
+    <header class="cabecera">
+      <span class="marca-cabecera">Andamia</span>
+      <nav class="nav" aria-label="Principal">
+        <a href="#como">Método</a>
+        <a href="#apps">Aplicaciones</a>
+        <a href="#soporte">Soporte</a>
+      </nav>
+    </header>
 
-  <h2>Qué hacemos</h2>
-  <p>Un médico especialista no estudia: entrena. Cumbra parte de esa idea. Cada aplicación
-  presenta casos clínicos y preguntas de conocimiento con una explicación razonada de por qué
-  la respuesta correcta lo es y por qué fallan las demás, y <strong>cada pregunta declara su
-  fuente</strong>: guías internacionales vigentes, con autor, publicación y año.</p>
-  <p>Un mismo núcleo, una aplicación por especialidad. Repetición espaciada para decidir cuándo
-  conviene volver a un caso, simulacro cronometrado y desglose del rendimiento por área.</p>
+    <main id="contenido">
+      <section class="hero-grid" aria-labelledby="hero-titulo">
+        <div>
+          <p class="mono mono-dorado">Estructura para el criterio clínico</p>
+          <h1 id="hero-titulo">Estructuras que sostienen el conocimiento.</h1>
+          <p class="lema">Como un andamio, Andamia diseña entornos claros para entrenar el criterio profesional. Desarrollamos <strong>Cumbra</strong> para especialidades médicas.</p>
+          <div class="pildoras" aria-label="Pilares de producto">
+            <span class="pildora">NÚCLEO COGNITIVO</span>
+            <span class="pildora">CASOS CLÍNICOS</span>
+            <span class="pildora">UNA APP POR ESPECIALIDAD</span>
+          </div>
+        </div>
 
-  <h2>Aplicaciones</h2>
-  <ul class="apps">
-    <li data-vertical="anestesia">
-      <p class="etiqueta">Anestesiología</p>
-      <h3>Cumbra Anestesia</h3>
-      <p>Casos clínicos y preguntas en 17 áreas de la especialidad, desde ciencias básicas hasta
-      medicina perioperatoria. Disponible próximamente en el App Store para iPhone.</p>
-    </li>
-    <li data-vertical="trauma">
-      <p class="etiqueta">Ortopedia y traumatología</p>
-      <h3>Cumbra TraumaOrtopedia</h3>
-      <p>Banco de casos de traumatología y ortopedia con el mismo método: razonamiento, fuente
-      y repetición espaciada.</p>
-    </li>
-  </ul>
-  <p>Las aplicaciones de Cumbra son material educativo dirigido a profesionales de la salud. No
-  sustituyen el juicio clínico ni constituyen consejo médico, y no son un dispositivo médico.</p>
+        <aside class="andamio-marco" aria-hidden="true">
+          <svg viewBox="0 0 260 156" width="260" height="156" style="width:100%;height:auto;display:block;" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="20" y1="136" x2="240" y2="136" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="48" y1="96" x2="212" y2="96" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="76" y1="56" x2="184" y2="56" stroke="#C9A96E" stroke-width="1.5"/>
+            <line x1="48" y1="136" x2="48" y2="96" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="212" y1="136" x2="212" y2="96" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="76" y1="96" x2="76" y2="56" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="184" y1="96" x2="184" y2="56" stroke="#376A90" stroke-width="1.5"/>
+            <line x1="48" y1="136" x2="130" y2="96" stroke="#1E3A55" stroke-width="1.2"/>
+            <line x1="212" y1="136" x2="130" y2="96" stroke="#1E3A55" stroke-width="1.2"/>
+            <line x1="76" y1="96" x2="130" y2="56" stroke="#1E3A55" stroke-width="1.2"/>
+            <line x1="184" y1="96" x2="130" y2="56" stroke="#1E3A55" stroke-width="1.2"/>
+            <circle cx="130" cy="28" r="10" stroke="#C9A96E" stroke-width="2"/>
+            <circle cx="130" cy="28" r="3.5" fill="#C9A96E"/>
+            <circle cx="76" cy="56" r="3" fill="#3FC79C"/>
+            <circle cx="184" cy="56" r="3" fill="#E08A4E"/>
+          </svg>
+          <div class="andamio-pie">
+            <span>ANDAMIAJE COGNITIVO</span>
+            <span class="mono-dorado">CUMBRA</span>
+          </div>
+        </aside>
+      </section>
 
-  <h2>Soporte</h2>
-  <p>Para dudas, problemas técnicos, correcciones de contenido o para pedir la eliminación de tu
-  cuenta, escribe a <a href="mailto:soporte@andamia.io">soporte@andamia.io</a>. Respondemos en
-  días hábiles.</p>
+      <section id="como" aria-labelledby="como-titulo">
+        <p class="mono">Cómo construimos</p>
+        <h2 id="como-titulo">Entrenar no es leer de corrido</h2>
 
-  <h2>Privacidad y términos</h2>
-  <ul>
-    <li><a href="https://lissethtovar.github.io/cumbra-legal/anestesia/privacidad.html">Cumbra Anestesia — Política de privacidad</a></li>
-    <li><a href="https://lissethtovar.github.io/cumbra-legal/trauma/privacidad.html">Cumbra TraumaOrtopedia — Política de privacidad</a></li>
-    <li><a href="https://lissethtovar.github.io/cumbra-legal/trauma/terminos.html">Cumbra TraumaOrtopedia — Términos de uso</a></li>
-  </ul>
+        <div class="pilares-grid">
+          <article class="tarjeta pilar-tarjeta">
+            <svg class="icono-svg" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="3" y="18" width="22" height="6" rx="2" stroke="#C9A96E" stroke-width="1.5"/>
+              <rect x="6" y="10" width="16" height="5" rx="2" stroke="#376A90" stroke-width="1.5"/>
+              <rect x="9" y="3" width="10" height="4" rx="2" stroke="#3FC79C" stroke-width="1.5"/>
+            </svg>
+            <p class="mono mono-dorado">01 · Estructura</p>
+            <h3>Núcleo compartido</h3>
+            <p>Un mismo diseño cognitivo adaptado al vocabulario y práctica de cada especialidad.</p>
+          </article>
 
-  <h2>La empresa</h2>
-  <dl class="datos">
-    <div><dt>Razón social</dt><dd>Andamia SpA</dd></div>
-    <div><dt>RUT</dt><dd>78.480.912-9</dd></div>
-    <div><dt>Domicilio</dt><dd>Saturnino Epulef 955, Depto 706b, Villarrica, Región de La Araucanía, Chile</dd></div>
-    <div><dt>Contacto</dt><dd><a href="mailto:soporte@andamia.io">soporte@andamia.io</a></dd></div>
-  </dl>
+          <article class="tarjeta pilar-tarjeta">
+            <svg class="icono-svg" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M4 21C8 20 11 12 15 11C19 10 21 6 24 5" stroke="#3FC79C" stroke-width="1.75" stroke-linecap="round"/>
+              <circle cx="15" cy="11" r="2.5" fill="#C9A96E"/>
+              <circle cx="24" cy="5" r="2.5" fill="#3FC79C"/>
+            </svg>
+            <p class="mono mono-dorado">02 · Método</p>
+            <h3>Casos con respaldo</h3>
+            <p>Práctica espaciada y explicación razonada con fuente cuando está disponible.</p>
+          </article>
 
-  <p class="pie">© 2026 Andamia SpA</p>
+          <article class="tarjeta pilar-tarjeta">
+            <svg class="icono-svg" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="10" stroke="#376A90" stroke-width="1.5"/>
+              <path d="M14 4A10 10 0 0 1 23 18" stroke="#3FC79C" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="14" cy="14" r="2.5" fill="#E4EDF4"/>
+            </svg>
+            <p class="mono mono-dorado">03 · Precisión</p>
+            <h3>Sesiones medibles</h3>
+            <p>Simulacros cronometrados y desglose por área para reforzar lo que más importa.</p>
+          </article>
+        </div>
+      </section>
 
-</main>
+      <section id="apps" aria-labelledby="apps-titulo">
+        <p class="mono">Aplicaciones Cumbra</p>
+        <h2 id="apps-titulo">Una aplicación por especialidad</h2>
+
+        <div class="apps-grid">
+          <article class="tarjeta app-tarjeta app-anestesia">
+            <div>
+              <div class="app-cabecera">
+                <span class="mono mono-anestesia">Anestesiología</span>
+                <span class="mono">iPhone</span>
+              </div>
+              <h3>Cumbra Anestesia</h3>
+              <p>Casos clínicos, simulacros cronometrados y escalas clínicas para anestesiólogos en cada etapa de su carrera. 7 días de prueba.</p>
+            </div>
+            <div>
+              <a class="btn btn-anestesia" href="https://cumbra.app/anestesia/">Ir a cumbra.app/anestesia/</a>
+            </div>
+          </article>
+
+          <article class="tarjeta app-tarjeta app-trauma">
+            <div>
+              <div class="app-cabecera">
+                <span class="mono mono-trauma">Traumatología y ortopedia</span>
+                <span class="mono mono-trauma">Próximamente</span>
+              </div>
+              <h3>Cumbra TraumaOrtopedia</h3>
+              <p>Entrenamiento clínico por imagen y casos bajo el mismo método.</p>
+            </div>
+            <div>
+              <span class="mono mono-trauma">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="soporte" aria-labelledby="soporte-titulo">
+        <p class="mono">Contacto y documentación</p>
+        <h2 id="soporte-titulo">Soporte y privacidad</h2>
+
+        <div class="info-grid">
+          <article class="tarjeta">
+            <p class="mono mono-dorado">Soporte</p>
+            <h3>Atención directa</h3>
+            <p>Dudas, reportes de contenido o solicitudes de cuenta en <a href="mailto:soporte@andamia.io">soporte@andamia.io</a>. Respuesta en días hábiles.</p>
+          </article>
+
+          <article class="tarjeta">
+            <p class="mono mono-dorado">Privacidad y términos</p>
+            <h3>Documentos vigentes</h3>
+            <ul class="lista-legal">
+              <li><a href="https://lissethtovar.github.io/cumbra-legal/anestesia/privacidad.html">Cumbra Anestesia — Privacidad</a></li>
+              <li><a href="https://lissethtovar.github.io/cumbra-legal/trauma/privacidad.html">Cumbra TraumaOrtopedia — Privacidad</a></li>
+              <li><a href="https://lissethtovar.github.io/cumbra-legal/trauma/terminos.html">Cumbra TraumaOrtopedia — Términos</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <span>© 2026 Andamia SpA</span>
+      <span>Material educativo para profesionales de la salud. No sustituye el juicio clínico ni constituye un dispositivo médico.</span>
+    </footer>
+  </div>
 </body>
 </html>
